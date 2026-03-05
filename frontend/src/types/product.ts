@@ -1,16 +1,16 @@
 export interface Product {
   id: number;
+  sku: string;
   name: string;
-  category_name: string;      // ดึงจาก JOIN categories
-  application_name: string;   // ดึงจาก JOIN applications
-  price: number;              // แปลงเป็น number ใน PHP แล้ว
-  stock: number;
-  images: string[];           // Array ของ string (URL รูปภาพ)
-
-  // ข้อมูลทางเทคนิคอื่นๆ (ที่ดึงมาจาก API)
-  style?: string;
-  wattage?: number;
-  color_temp_k?: number;
-  ip_rating?: string;
-  created_at?: string;
+  style: 'Classic' | 'Modern' | 'Semi-Modern';
+  price: number;
+  status: 'Ready to Ship' | 'Out of Stock';
+  main_image: string;
+  specs?: {
+    material: string;
+    size: string;
+    bulb: string;
+  };
+  category_name?: string;
+  application_name?: string;
 }
