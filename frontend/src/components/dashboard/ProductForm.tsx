@@ -38,13 +38,15 @@ interface ProductFormProps {
   isEditing?: boolean;
 }
 
+// 2. ปรับปรุงการประกาศ form ในตัว Component
 export function ProductForm({ defaultValues, onSubmit, isEditing = false }: ProductFormProps) {
   const [loadingOptions, setLoadingOptions] = useState(true);
   const [categories, setCategories] = useState<{ id: number, name: string }[]>([]);
   const [applications, setApplications] = useState<{ id: number, name: string }[]>([]);
   const [imagePreviews, setImagePreviews] = useState<string[]>([]);
 
-  const form = useForm<ProductFormValues>({
+  // ลบ <ProductFormValues> ออกไปเลยครับ ให้มัน Infer อัตโนมัติจาก resolver
+  const form = useForm({
     resolver: zodResolver(productSchema),
     defaultValues: {
       name: defaultValues?.name || "",

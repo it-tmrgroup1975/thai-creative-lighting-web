@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
 import api from "../services/api"; // Axios instance ของคุณ
 
 const AuthContext = createContext<any>(null);

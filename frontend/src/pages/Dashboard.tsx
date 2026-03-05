@@ -36,7 +36,7 @@ export default function Dashboard() {
   );
 }
 
-function StatsCard({ title, value, desc, icon, trend }: any) {
+function StatsCard({ title, value, desc, icon }: any) {
   return (
     <Card className="group border-none bg-white/50 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(249,115,22,0.1)] transition-all duration-500 rounded-[2rem] overflow-hidden border-t border-white/40">
       <CardHeader className="flex flex-row items-center justify-between pb-2">

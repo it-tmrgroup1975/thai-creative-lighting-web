@@ -9,8 +9,7 @@ import {
   LogOut,
   ChevronLeft,
   ChevronRight,
-  Package,
-  Home
+  Package
 } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { toast } from "sonner";
